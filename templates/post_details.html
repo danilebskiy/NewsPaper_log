@@ -1,0 +1,31 @@
+
+{% extends 'flatpages/default.html' %}
+
+{% block title %}
+News
+{% endblock title %}
+
+{% block content %}
+<h1>{{ posts}}</h1>
+    <h3>{{ time_now|date:'d M Y' }}</h3>
+    <hr>
+       <table>
+           <tr>
+               <td>Новость.</td>
+               <td>Заголовок</td>
+               <td>Дата</td>
+               <td>Текст</td>
+
+           </tr>
+
+
+           <tr>
+               <td>{{ posts.content_type }}</td>
+               <td>{{ posts.content_header }}</td>
+               <td>{{ posts.data }}</td>
+               <td>{{ posts.content_text}}</td>
+           </tr>
+
+
+       </table>
+{% endblock content %}
